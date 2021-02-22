@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
     audioclient-types-aidl-cpp.vendor
 
 PRODUCT_COPY_FILES += \
-<<<<<<< HEAD
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
