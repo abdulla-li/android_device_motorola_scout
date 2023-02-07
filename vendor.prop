@@ -86,3 +86,4 @@ ro.vendor.composer_version=3.2
 # Surface Flinger
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=0
+debug.sf.enable_transaction_tracing=false
