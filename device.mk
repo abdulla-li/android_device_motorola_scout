@@ -202,7 +202,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6878 \
-    init.connectivity.rc \
     init.connectivity.common.rc \
     init_conninfra.rc \
     init.mmi.overlay.rc \
@@ -214,7 +213,6 @@ PRODUCT_PACKAGES += \
     init.mtkgki.rc \
     init.oem.hw.sh \
     init.project.rc \
-    init.sensor_2_0.rc \
     ueventd.mt6878.rc
 
 PRODUCT_COPY_FILES += \
@@ -247,6 +245,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     FrameworkResOverlayScout
+    SettingsResOverlayScout
 
 # Power
 PRODUCT_PACKAGES += \
