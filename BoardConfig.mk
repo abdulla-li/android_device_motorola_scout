@@ -169,6 +169,9 @@ WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{P2P}, 1}}
 WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
+# Sepolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 AB_OTA_PARTITIONS += \
     vbmeta \
