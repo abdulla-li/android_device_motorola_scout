@@ -5,6 +5,12 @@
 
 DEVICE_PATH := device/motorola/scout
 
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 34
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
