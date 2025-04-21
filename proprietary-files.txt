@@ -164,3 +164,14 @@ vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/smartpa_param/AW_SINWAVE_DSP.bin
+
+# Bluetooth (Driver)
+vendor/lib64/libbt-vendor.so
+vendor/lib64/libbluetooth_mtk.so
+
+# Bluetooth (Firmware)
+vendor/firmware/BT_FW.cfg
+vendor/firmware/soc7_0_ram_bt_1_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1a_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
+
