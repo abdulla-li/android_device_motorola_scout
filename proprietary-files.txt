@@ -298,3 +298,27 @@ vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
+
+# Sensors
+vendor/firmware/remoteproc_scp
+vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
+vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6897.so
+vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
+vendor/lib64/hw/sensors.dynamic_sensor_hal.so
+vendor/lib64/hw/sensors.light_compensate.so
+vendor/lib64/libhfmanager.so
+vendor/lib64/libhfmanagerwrapper.so
+vendor/lib64/libhwm.so
+vendor/lib64/libksensor.so
+vendor/lib64/sensors.moto.so
+
+# Sensors calibration
+vendor/bin/hw/motorola.hardware.sensorscalibrate-service
+vendor/etc/init/motorola.hardware.sensorscalibrate.service.rc
+vendor/etc/vintf/manifest/motorola.hardware.sensors.sensorscalibrate.xml
+
+# Sensors (Configs)
+vendor/etc/sensors/als_comp_config.xml
+vendor/etc/sensors/als_comp_tf_csot_c8.config
+vendor/etc/sensors/als_comp_tf_csot_c8_dc_on.config
+vendor/etc/sensors/als_comp_tf_tianma.config
