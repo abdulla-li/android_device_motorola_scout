@@ -121,11 +121,17 @@
     <array name="config_availableColorModes">
         <item>0</item>
         <item>1</item>
-        <item>300</item>
-    </array>
+        <item>30</item>
 
     <!-- Ambient Light Sensor used for auto-brightness (matches Sensor HAL name) -->
     <string name="config_autoBrightnessLightSensorName">tcs3720_als</string>
+
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -234,4 +240,11 @@
 
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
+
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+        <item>534</item> <!-- sensorLocationX -->
+        <item>2170</item> <!-- sensorLocationY -->
+        <item>102</item> <!-- sensorRadius -->
+    </integer-array>
 </resources>
