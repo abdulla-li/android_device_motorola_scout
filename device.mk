@@ -48,6 +48,11 @@ PRODUCT_VIRTUAL_AB_COMPRESSION := true
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
 
+# Inherit common MediaTek IMS
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
+
+# A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -199,10 +204,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-# IMS
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6878 \
@@ -253,8 +254,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayScout \
     TetheringConfigOverlay \
     WifiOverlay \
-    EuiccOverlay \
-    TelephonyOverlayScout
+    EuiccOverlay
 
 # Power
 PRODUCT_PACKAGES += \
