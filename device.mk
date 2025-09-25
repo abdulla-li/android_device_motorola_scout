@@ -245,6 +245,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/seccomp_policy/android.hardware.media.c2@1.2-mediatek-64b.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-64b.policy
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -254,7 +257,8 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayScout \
     TetheringConfigOverlay \
     WifiOverlay \
-    EuiccOverlay
+    EuiccOverlay \
+    SecureElementOverlayScout
 
 # Power
 PRODUCT_PACKAGES += \
