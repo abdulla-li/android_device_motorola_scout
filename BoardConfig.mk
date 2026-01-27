@@ -125,7 +125,6 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
-
 BOARD_BOOT_HEADER_VERSION := 4
 
 BOARD_DTB_OFFSET := 0x07c88000
@@ -175,6 +174,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/basic/non_plat
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+
+# Udfps
+TARGET_USES_FOD_ZPOS := true
+$(call soong_config_set,surfaceflinger,udfps_lib,//device/motorola/scout/udfps:libudfps_extension.scout)
 
 # Verified Boot
 AB_OTA_PARTITIONS += \

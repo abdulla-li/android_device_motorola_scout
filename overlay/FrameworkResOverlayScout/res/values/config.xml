@@ -37,7 +37,7 @@
         <item>200000</item>
     </integer-array>
 
-<!-- Array of desired screen brightness in nits corresponding to the lux values
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
       in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
       config_screenBrightnessMaximumNits, the display brightness is defined as the measured
       brightness of an all-white image.
@@ -117,30 +117,24 @@
         <item>1850</item>
     </array>
 
- <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <array name="config_availableColorModes">
         <item>0</item>
         <item>1</item>
-        <item>30</item>
+        <item>300</item>
+    </array>
+
+    <!-- Properties defining the under-display fingerprint sensor (UDFPS) location
+         and size, typically expressed as center X, center Y, and sensor radius
+         in pixels -->
+    <integer-array name="config_udfps_sensor_props">
+        <item>610</item>
+        <item>2440</item>
+        <item>101</item>
+    </integer-array>
 
     <!-- Ambient Light Sensor used for auto-brightness (matches Sensor HAL name) -->
     <string name="config_autoBrightnessLightSensorName">tcs3720_als</string>
-
-    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
-         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
-         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
-         and Strength as defined in Authenticators.java -->
-    <string-array name="config_biometric_sensors" translatable="false" >
-        <item>0:2:15</item>
-    </string-array>
-
-    <!-- UDFPS HBM (High Brightness Mode) settings for fingerprint illumination -->
-    <!-- UDFPS HBM Configuration -->
-    <bool name="config_udfps_full_keys_supported">true</bool>
-    <bool name="config_udfps_local_hbm_supported">true</bool>
-    <integer name="config_udfps_local_hbm_fix_refresh_rate">120</integer>
-    <integer name="config_hbmSessionLimit">0</integer>
-    <!-- End UDFPS HBM Configuration -->
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -173,20 +167,23 @@
          that can be set by the user. -->
     <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.033404917</item>
 
-     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
+    <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-     <!-- Control whether the always on display mode is available. This should only be enabled on
+    <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
          states. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
-     <!-- The default refresh rate for a given device. Change this value to set a higher default
+    <bool name="config_dozeAlwaysOnEnabled">true</bool>
+    <integer name="config_screenBrightnessDoze">10</integer>
+    <string name="config_dozeComponent">
+        com.android.systemui/com.android.systemui.doze.DozeService
+    </string>
+    <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
          refresh rate than the default value specified here, the framework may use those higher
          refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
@@ -194,7 +191,19 @@
          If a non-zero value is set for config_defaultPeakRefreshRate, then
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultRefreshRate">120</integer>
+
+    <!-- Default minimum display refresh rate in Hz used by the system
+         when no higher constraints are imposed -->
+    <integer name="config_defaultMinRefreshRate">24</integer>
+
+    <!-- Default minimum display refresh rate in Hz when the device is in
+         CLI / cover display mode -->
+    <integer name="config_defaultMinRefreshRateCli">60</integer>
+
+    <!-- Default display refresh rate in Hz used when the device enters
+         a defined refresh rate zone (e.g. high-performance or scrolling zones) -->
+    <integer name="config_defaultRefreshRateInZone">90</integer>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
          the framework from using higher refresh rates, even if display modes with higher refresh
@@ -202,8 +211,31 @@
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
+    <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
+         vendors to tune the curves to have exact same brightness for different refresh rate. So
+         flicker could be observed at switch time. The issue is worse at the gamma lower end.
+         In addition, human eyes are more sensitive to the flicker at darker environment.
+         To prevent flicker, we only support higher refresh rates if the display brightness is above
+         a threshold.
+         For example, no higher refresh rate if
+             display brightness <= disp0 && ambient brightness <= amb0
+             || display brightness <= disp1 && ambient brightness <= amb1
+         Brightness thresholds are paired with lux thresholds - they both have to be met.
+         A negative brightness or lux value means that only one threshold should be used - e.g. if
+         the brightness value is negative, only the lux threshold is applied. -->
+    <!-- Low zone brightness thresholds in the range [0, 255] -->
+    <integer-array translatable="false" name="config_brightnessThresholdsOfPeakRefreshRate">
+        <item>56</item>
+        <item>68</item>
+    </integer-array>
+    <!-- Low zone lux thresholds -->
+    <integer-array translatable="false" name="config_ambientThresholdsOfPeakRefreshRate">
+        <item>-1</item>
+        <item>70</item>
+    </integer-array>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-          autodetected from the Configuration. -->
+         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
     <!-- Whether this device is supporting the camera toggle -->
@@ -250,13 +282,6 @@
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
 
-    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
-    <integer-array name="config_udfps_sensor_props" translatable="false" >
-        <item>534</item> <!-- sensorLocationX -->
-        <item>2170</item> <!-- sensorLocationY -->
-        <item>102</item> <!-- sensorRadius -->
-    </integer-array>
-
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
@@ -266,13 +291,7 @@
          To facilitate writing device-independent emulation overlays, the marker `@dp` can be
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results. -->
-    <string name="config_mainBuiltInDisplayCutout">M -35,0 L 35,0 L 35,105 L -35,105 Z</string>
-
-    <!-- Type of the single tap sensor. Empty if single tap is not supported. -->
-    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_tap</string>
-
-    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
-    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+    <string name="config_mainBuiltInDisplayCutout">M -45,0 L 45,0 L 45,128 L -45,128 Z</string>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -288,9 +307,13 @@
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
+        <item>"/system/lib64/libsurfaceflinger.so"</item>
+        <item>"/system/lib64/libhwui.so"</item>
+        <item>"/system/lib64/libaudioprocessing.so"</item>
         <item>"/product/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
         <item>"/product/priv-app/SystemUIGoogle/oat/arm64/SystemUIGoogle.odex"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
     </string-array>
 
     <!-- Should the pinner service pin the Camera application? -->
@@ -298,19 +321,6 @@
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
-
-    <!-- List of files pinned by the Pinner Service with the apex boot image b/119800099 -->
-    <string-array translatable="false" name="config_apexBootImagePinnerServiceFiles">
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/system/framework/arm64/apex.oat"</item>
-        <item>"/system/framework/arm64/apex-core-libart.oat"</item>
-        <item>"/apex/com.android.runtime/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.runtime/javalib/core-libart.jar"</item>
-        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-        <item>"/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
-    </string-array>
 
     <!-- Remove MTK IMS app from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">com.mediatek.ims</string>
@@ -333,34 +343,20 @@
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
         <item>20</item>
-        <item>30</item>
     </array>
+
+    <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
+    <integer-array name="config_clockTickVibePattern">
+        <item>0</item>
+        <item>10</item>
+    </integer-array>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <array name="config_longPressVibePattern">
         <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-    </array>
-
-    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
-    <integer-array name="config_scrollBarrierVibePattern">
-        <item>0</item>
         <item>30</item>
-        <item>5</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback that simulates a double click effect -->
-    <integer-array name="config_doubleClickVibePattern">
-        <item>0</item>
-        <item>150</item>
-        <item>0</item>
-        <item>150</item>
-        <item>20</item>
-    </integer-array>
+    </array>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
