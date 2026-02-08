@@ -24,4 +24,3 @@ type sysfs_hbm, sysfs_type, fs_type;
 type vendor_boot_log_file, file_type;
 
 typeattribute hal_graphics_allocator_default_tmpfs mlstrustedobject, hal_graphics_allocator_client_tmpfs;
-
