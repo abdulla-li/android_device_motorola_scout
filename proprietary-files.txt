@@ -245,6 +245,16 @@ vendor/lib64/mt6878/libdpframework.so:vendor/lib64/libdpframework.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
+# Keystore
+vendor/bin/hw/android.hardware.security.keymint@3.0-service.trustonic
+vendor/etc/init/android.hardware.security.keymint@3.0-service.trustonic.rc
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
+vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
+vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
+vendor/etc/keymint3_thales_multiscript_02_15.xml
+vendor/lib64/libdecrypt.so
+vendor/lib64/libkmsetkey.so
+
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/mt6878/jpegtool;SYMLINK=vendor/bin/jpegtool
