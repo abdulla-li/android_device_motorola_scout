@@ -159,8 +159,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 BOARD_USES_METADATA_PARTITION := true
 
 # Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
