@@ -1203,6 +1203,22 @@ vendor/lib64/libstorage_otp.so
 vendor/lib64/libsysenv.so
 vendor/lib64/vendor.mediatek.hardware.nvram-V1-ndk.so
 
+# Power
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+vendor/etc/init/mtkpower_applist-mtk-default.rc
+vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
+vendor/etc/vintf/manifest/power-mediatek.xml
+vendor/lib64/hw/vendor.mediatek.hardware.mtkpower-aidl-impl.so
+vendor/lib64/libpowerhal.so
+vendor/lib64/libpower_timer.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
+vendor/lib64/vendor.mediatek.framework.mtksf_ext-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
+vendor/lib64/lib_power_applist.so
+
 # Picture Quality
 vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service

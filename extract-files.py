@@ -144,6 +144,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     'vendor/etc/init/thermal-mediatek.rc': blob_fixup()
         .regex_replace('android.hardware.thermal-service.mediatek', 'android.hardware.thermal-service.mediatek.fuji'),
+    ('vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek',
+     'vendor/lib64/android.hardware.power-service-mediatek.so'): blob_fixup()
+        .replace_needed('android.hardware.power-service-mediatek.so', 'android.hardware.power-service-mediatek.scout.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

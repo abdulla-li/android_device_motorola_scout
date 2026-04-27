@@ -271,17 +271,18 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    libpowerhalwrap_vendor
+
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libmtkperf_client \
+    android.hardware.power-service-mediatek.scout
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 PRODUCT_PACKAGES += \
     init.mt6878.power.rc
-
-PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Radio
 PRODUCT_COPY_FILES += \
