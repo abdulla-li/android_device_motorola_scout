@@ -187,10 +187,8 @@ PRODUCT_PACKAGES += \
     init_conninfra.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.mmi.usb.sh \
     init.mmi.usb.configfs.rc \
     init.modem.rc \
-    init.recovery.mt6878.rc \
     init.mt6878.rc \
     init.mt6878.usb.rc \
     init.mt6878.power.rc \
@@ -272,15 +270,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    libpowerhalwrap_vendor
-
-PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
-    libmtkperf_client \
-    android.hardware.power-service-mediatek.scout
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    android.hardware.power-service.pixel-libperfmgr \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -288,9 +279,14 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 TARGET_BOARD_PLATFORM := mt6878
 
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Radio
 PRODUCT_PACKAGES += \
-    vendor_mdota_symlink
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.singlereg.xml \

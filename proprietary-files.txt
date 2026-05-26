@@ -6,7 +6,6 @@
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 vendor/lib64/libudf.so
-
 # Audio
 vendor/bin/audiocmdservice_atci
 vendor/bin/mt6660_calibration
@@ -62,7 +61,6 @@ vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-
 # Audio (configs)
 vendor/etc/aualgo/ainr_tfv2.dat
 vendor/etc/aualgo/aualgo_comp_azs.conf
@@ -269,7 +267,6 @@ vendor/etc/goodix/ve21rv_retcn/VoIP_mic_spk_VF.bin
 vendor/etc/goodix/ve21rv_retcn/VoIP_mic_usb.bin
 vendor/etc/goodix/ve21rv_retcn/VoIP_usb_usb.bin
 vendor/etc/goodix/ve21rv_retcn/VoIP_usb_usb_VF.bin
-
 # Audio (dolby)
 vendor/bin/hw/vendor.dolby.dms.service
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
@@ -290,11 +287,9 @@ vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/libspatializerparamstorage.so
-
 # Health
 vendor/bin/hw/motorola.hardware.health-service
 vendor/lib64/motorola.hardware.health.aidl-V1-ndk.so
-
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/bin/autobt
@@ -313,7 +308,6 @@ vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbt-vendor.so
-
 # Camera
 vendor/bin/hw/mt6878/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
 vendor/etc/init/camerahalserver.rc
@@ -742,13 +736,11 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-
 # Camera (arcsoft)
 vendor/etc/ArcCustomParams.json
 vendor/etc/arc_uw_dc_calibration.bin
 vendor/etc/arcsoft_calibration_u_dc.bin
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
-
 # Camera (configs)
 vendor/etc/bstai_hdr
 vendor/etc/SwadAIMod.bin
@@ -756,7 +748,6 @@ vendor/etc/SwadCalib.bin
 vendor/etc/SwadParamList.txt
 vendor/etc/camera/vidhance.lic
 vendor/etc/camera/vidhance_calibration
-
 # Camera (parameter database)
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6878/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6878/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
@@ -814,12 +805,6 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_ra
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_imx896_mipi_raw/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_imx896_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_imx896_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_imx896_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mot_scout_s5kjns_uw_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mt6878/ISP_info.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ISP_info.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ov48b_mipi_raw/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ov48b_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ov48b_mipi_raw/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ov48b_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
@@ -832,22 +817,18 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/s5k3p9sp_mipi_raw/mt6878
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6878/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_mapping.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6878/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6878/ISP_info.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/ISP_info.db;MAKE_COPY_RULE_ONLY
-
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
 vendor/lib64/libconnfem.so
-
 # Charge only mode
 vendor/bin/charge_only_mode
-
 # Display
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service
 vendor/bin/hw/mt6878/android.hardware.graphics.allocator-V2-service-mediatek.mt6878;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
 vendor/bin/hw/mt6878/arm.mali.platform-service.mediatek.mt6878;SYMLINK=vendor/bin/hw/arm.mali.platform-service.mediatek
 vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
-vendor/etc/bstai_hdr
 vendor/etc/gralloc/cam.xml
 vendor/etc/gralloc/dpu.xml
 vendor/etc/gralloc/dpu_aeu.xml
@@ -936,13 +917,11 @@ vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
-
 # Display (configs)
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/vhw.xml
 vendor/etc/cust_pq.xml
 vendor/etc/cust_color.xml
-
 # Display (panel)
 vendor/bin/hw/com.motorola.hardware.display.panel-service
 vendor/etc/init/com.motorola.hardware.display.panel-service.rc
@@ -950,34 +929,27 @@ vendor/etc/vintf/manifest/com.motorola.hardware.display.panel-service.xml
 vendor/lib64/com.motorola.hardware.display.panel-V1-ndk.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib/com.motorola.hardware.display.panel@1.0.so
-
 # Display (touch)
 vendor/bin/hw/com.motorola.hardware.display.touch-service
 vendor/etc/init/com.motorola.hardware.display.touch-service.rc
 vendor/etc/vintf/manifest/com.motorola.hardware.display.touch.xml
 vendor/lib64/com.motorola.hardware.display.touch-V3-ndk.so
-
 # DRM
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
-
 # eUICC
 product/app/EuiccPartnerApp/EuiccPartnerApp.apk;PRESIGNED
 product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
-
 # Face unlock
-
 # Felica
 product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
-
 # FDR
 vendor/bin/hw/motorola.hardware.fdr-service
 vendor/etc/init/motorola.hardware.fdr.service.rc
 vendor/etc/vintf/manifest/motorola.hardware.fdr.service.xml
 vendor/lib64/motorola.hardware.fdr-V1-ndk.so
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.goodix
 vendor/etc/init/android.hardware.biometrics.fingerprint-service-goodix2.rc
@@ -987,7 +959,6 @@ vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/android.hardware.biometrics.fingerprint-V3-ndk.so:vendor/lib64/android.hardware.biometrics.fingerprint-V3-ndk-moto.so;FIX_SONAME
 vendor/lib64/android.hardware.biometrics.common-V3-ndk.so:vendor/lib64/android.hardware.biometrics.common-V3-ndk-moto.so;FIX_SONAME
-
 # Firmware
 vendor/firmware/csot_goodix_cfg_group.bin
 vendor/firmware/csot_goodix_firmware.bin
@@ -1104,12 +1075,10 @@ vendor/firmware/txpowerctrl_APEM.cfg
 vendor/firmware/txpowerctrl_LATAM.cfg
 vendor/firmware/valhall-1691526.wa
 vendor/firmware/wifi.cfg
-
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service.trustonic
 vendor/etc/init/android.hardware.gatekeeper-service.trustonic.rc
 vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.trustonic.xml
-
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/hw/vendor.mediatek.hardware.gnss-service
@@ -1133,7 +1102,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.gnss.batching-impl.so
 vendor/lib64/vendor.mediatek.hardware.gnss-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so
-
 # GNSS (configs)
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
@@ -1172,14 +1140,12 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Virgin_Mobile.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
-
 # Input
 vendor/bin/hw/motorola.hardware.input@1.1-service
 vendor/etc/init/motorola.hardware.input@1.1-service.rc
 vendor/etc/vintf/manifest/motorola.hardware.input@1.1-service.xml
 vendor/lib64/motorola.hardware.input@1.0.so
 vendor/lib64/motorola.hardware.input@1.1.so
-
 # Keystore
 vendor/bin/hw/android.hardware.security.keymint@3.0-service.trustonic
 vendor/etc/init/android.hardware.security.keymint@3.0-service.trustonic.rc
@@ -1188,12 +1154,10 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustoni
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 vendor/lib64/libdecrypt.so
 vendor/lib64/libkmsetkey.so
-
 # Light service
 vendor/bin/hw/android.hardware.lights-service.mediatek
 vendor/etc/init/lights-mtk-default.rc
 vendor/lib64/vendor.mediatek.hardware.mtklight-V1-ndk.so
-
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
@@ -1248,8 +1212,6 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.apusys-V5-ndk.so
-
-
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/mt6878/jpegtool;SYMLINK=vendor/bin/jpegtool
@@ -1260,7 +1222,6 @@ vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 vendor/etc/vintf/manifest/manifest_media_c2_V1_2_atom_only.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
-vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/etc/mtk_platform_codecs_config.xml
 vendor/lib64/libJpgEncPipe.so
@@ -1283,11 +1244,9 @@ vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
-
 # Modules
 vendor/bin/init.insmod.sh
 vendor/etc/init.insmod.mt6878.cfg
-
 # Motorola (scripts)
 vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/bin/hardware_revisions.sh
@@ -1302,7 +1261,6 @@ vendor/bin/kpreadwrite
 vendor/bin/pstore_annotate.sh
 vendor/etc/init/hw/init.mmi.backup.trustlet.rc
 vendor/etc/init/vendor.mmi.carrier.rc
-
 # Motorola TCMD
 vendor/bin/mot_tcmd
 vendor/lib64/libtpa.so
@@ -1310,7 +1268,6 @@ vendor/lib64/libpkip.so
 vendor/lib64/libDxHdcp.so
 vendor/lib64/vendor.tsa.hdcp-V1-ndk.so
 system_ext/lib64/libDxHdcp_ext.so
-
 # MMS
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
@@ -1322,10 +1279,8 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 # NFC
 vendor/bin/hw/android.hardware.nfc-service.nxp
 vendor/bin/hw/android.hardware.secure_element-service.nxp
-vendor/bin/hw/android.hardware.security.keymint3-service.strongbox.nxp
 vendor/bin/hw/android.hardware.weaver-service.nxp
 vendor/bin/hw/se_update_agent.nxp
-vendor/etc/init/android.hardware.security.keymint3-service.strongbox.nxp.rc
 vendor/etc/init/android.hardware.weaver-service.nxp.rc
 vendor/etc/init/init.scout.nfc.conf.rc
 vendor/etc/init/init.scout.nfc.rc
@@ -1342,24 +1297,12 @@ vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc_calibration.txt
 vendor/etc/permissions/com.nxp.mifare.xml
 -vendor/etc/vintf/manifest/nfc-service-nxp.xml
-vendor/lib64/android.hardware.nfc-V1-ndk.so
-vendor/lib64/android.hardware.nfc@1.0.so
-vendor/lib64/android.hardware.nfc@1.1.so
-vendor/lib64/android.hardware.nfc@1.2.so
-vendor/lib64/android.hardware.secure_element-V1-ndk.so
-vendor/lib64/android.hardware.secure_element@1.0.so
 vendor/lib64/ese_teq1_nxp_snxxx.so
 vendor/lib64/ese_weaver.nxp.so
-vendor/lib64/libjc_keymint3.nxp.so
-vendor/lib64/libjc_keymint_transport.nxp.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libpn560_fw.so
 vendor/lib64/ls_client.so
 vendor/lib64/nfc_nci_nxp_snxxx.so
-vendor/lib64/vendor.nxp.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so
-vendor/lib64/vendor.nxp.nxpnfc_aidl-V1-ndk.so
-
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram-service
 vendor/bin/nvram_daemon
@@ -1377,32 +1320,7 @@ vendor/lib64/libstorage_otp.so
 vendor/lib64/libsysenv.so
 vendor/lib64/vendor.mediatek.hardware.nvram-V1-ndk.so
 
-# Power
-vendor/lib64/vendor.mediatek.hardware.power@1.1.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/mtkpower_applist-mtk-default.rc
-vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
-vendor/etc/vintf/manifest/power-mediatek.xml
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower-aidl-impl.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpower_timer.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
-vendor/lib64/vendor.mediatek.framework.mtksf_ext-V2-ndk.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
-vendor/lib64/lib_power_applist.so
-
 # Picture Quality
-vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
-vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
-vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc
-vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
-vendor/etc/pq_flag.xml
-vendor/etc/cust_color.xml
-vendor/etc/cust_pq.xml
 vendor/etc/boe_vtdr6126a_667_1220_2712_C3D_default.txt
 vendor/etc/boe_vtdr6126a_667_1220_2712_C3D_p3.txt
 vendor/etc/boe_vtdr6126a_667_1220_2712_C3D_srgb.txt
@@ -1415,43 +1333,8 @@ vendor/etc/csot_nt37706_667_1220_2712_C3D_default.txt
 vendor/etc/csot_nt37706_667_1220_2712_C3D_p3.txt
 vendor/etc/csot_nt37706_667_1220_2712_C3D_srgb.txt
 vendor/etc/csot_nt37706_667_1220_2712_pq.xml
-vendor/etc/vintf/manifest/manifest_mmlpq.xml
-vendor/lib64/hw/mt6878/vendor.mediatek.hardware.pq_aidl-impl.so:vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
-vendor/lib64/libpqframework.so
-vendor/lib64/libpqhdrmetaparser.so
-vendor/lib64/libpqsharememory.so
-vendor/lib64/libpqtuning.so
-vendor/lib64/libpqxmlflagparser.so
-vendor/lib64/libpqxmlparser.so
-vendor/lib64/librgbwlightsensor.so
-vendor/lib64/libscltm.so
-vendor/lib64/mt6878/libmml.so:vendor/lib64/libmml.so
-vendor/lib64/mt6878/libmmlpqImpl.so:vendor/lib64/libmmlpqImpl.so
-vendor/lib64/mt6878/libpq_cust_base.so:vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6878/libpq_sec.so:vendor/lib64/libpq_sec.so
-vendor/lib64/mt6878/libpqconfig.so:vendor/lib64/libpqconfig.so
-vendor/lib64/mt6878/libpqparamparser.so:vendor/lib64/libpqparamparser.so
-vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.11.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V3-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
-
 # Public libraries
 vendor/etc/public.libraries.txt
-
 # Radio
 vendor/bin/bip_ap
 vendor/bin/ccci_mdinit
@@ -1560,9 +1443,7 @@ vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt_new-V1-ndk.so
 system_ext/lib64/libccci_util_sys.so
-
 # FM Radio (Firmware)
-
 # Radio (IMS)
 vendor/bin/mtk_lbs_service
 vendor/bin/rcs_volte_stack
@@ -1583,13 +1464,11 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so
-
 # Radio (MTK-IMS)
 vendor/bin/hw/vtservice_aidl
 vendor/etc/init/init.vtservice_aidl.rc
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-
 # Radio (Telephony Assist)
 system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
 system_ext/framework/mediatek-framework.jar
@@ -1597,17 +1476,11 @@ system_ext/framework/mtk-moto-telephony-ext.jar
 system_ext/framework/mtk-moto-ims-ext.jar
 system_ext/framework/mediatek-ims-base.jar
 system_ext/framework/mtk-telephony-common.jar:system/framework/mtk-telephony-common.jar;BOOT_JAR
-
 # Secure element
-vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
-
 # Secure element - configs
 vendor/etc/hal_uuid_map_bne.xml
 vendor/etc/hal_uuid_map_config.xml
 vendor/etc/hal_uuid_map_dne.xml
-vendor/etc/hdrcfg.cfg
-
 # Sensors
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6878.so
@@ -1622,17 +1495,14 @@ vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/sensors.moto.so
-
 # Sensors calibration
 vendor/bin/hw/motorola.hardware.sensorscalibrate-service
 vendor/etc/init/motorola.hardware.sensorscalibrate.service.rc
 vendor/etc/vintf/manifest/motorola.hardware.sensors.sensorscalibrate.xml
-
 # Sensor ext
 vendor/bin/hw/motorola.hardware.sensorext-service
 vendor/etc/init/motorola.hardware.sensorext.service.rc
 vendor/lib64/motorola.hardware.sensors-V2-ndk.so
-
 # Thermal
 vendor/bin/hw/android.hardware.thermal-service.mediatek:vendor/bin/hw/android.hardware.thermal-service.mediatek.scout
 vendor/bin/thermal_core
@@ -1642,7 +1512,6 @@ vendor/etc/init/thermal-mediatek.rc
 vendor/etc/vintf/manifest/thermal-mediatek.xml
 vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libpowerhalwrap_vendor.so
-
 # Thermal configs
 vendor/etc/thermal/disable_skin_control.conf
 vendor/etc/thermal/disable_thermal.conf
@@ -1701,7 +1570,6 @@ vendor/etc/thermal/thermal_policy_12.conf
 vendor/etc/thermal/thermal_policy_13.conf
 vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_17.conf
-
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
@@ -1752,7 +1620,6 @@ vendor/lib64/libgz_uree.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
-
 # USB
 vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
 vendor/bin/hw/android.hardware.usb.gadget-aidl-service.mediatekv1.0
@@ -1760,7 +1627,6 @@ vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc
 vendor/etc/init/android.hardware.usb.gadget-aidl-service.mediatek.rc
 vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-aidl-service.mediatek.xml
-
 # Vibrator
 vendor/bin/hw/android.hardware.vibrator-service.mediatek
 vendor/etc/init/vibrator-mtk-default.rc
@@ -1770,7 +1636,6 @@ vendor/lib64/libaacvibrator.so
 vendor/lib64/libtiktapvibrator.so
 vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk.so
 vendor/lib64/vendor.awinic.hardware.tiktap.vibrator-V1-ndk.so
-
 # VPU
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_cic_ci_compiler_25.so
@@ -1804,7 +1669,6 @@ vendor/lib64/libmvpuop25_mtk_cv.so
 vendor/lib64/libmvpuop25_mtk_nn.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
-
 # WiFi
 vendor/bin/stp_dump3
 vendor/bin/wifi_dump
@@ -1820,16 +1684,13 @@ vendor/bin/hw/motorola.hardware.sarwifi-srv
 vendor/etc/init/sarwifi-default.rc
 vendor/etc/vintf/manifest/sarwifi-default.xml
 vendor/lib64/motorola.hardware.sarwifi-V1-ndk.so
-
 # WIFI (firmware)
-
 # ZUI Alarm
 vendor/bin/hw/vendor.zuialarm.hardware.alarm-service
 vendor/bin/zui_power_off_alarm
 vendor/etc/init/vendor.zuialarm.hardware.alarm-service.rc
 vendor/etc/vintf/manifest/vendor.zuialarm.hardware.alarm.xml
 vendor/lib64/vendor.zuialarm.hardware.alarm-V1-ndk.so
-
 # SKU Properties
 vendor/etc/motorola/props/sku.n.prop
 vendor/etc/motorola/props/sku.nc.prop
@@ -1839,7 +1700,6 @@ vendor/etc/motorola/props/sku.s.prop
 vendor/etc/motorola/props/sku.sn.prop
 vendor/etc/motorola/props/sku.t.prop
 vendor/etc/motorola/props/sku.uw.prop
-
 # Carrier Properties
 product/etc/motorola/props/carrier.3gb.prop
 product/etc/motorola/props/carrier.3ie.prop
@@ -1897,4 +1757,8 @@ product/etc/motorola/props/hardware.sku.XT2505-2.prop
 product/etc/motorola/props/hardware.sku.XT2505-3.prop
 product/etc/motorola/props/hardware.sku.XT2505-5.prop
 product/etc/motorola/props/hardware.sku.XT2505-6.prop
-
+vendor/lib64/se_extn_client.so
+vendor/lib64/mt6878/mot_scout_imx896_mipi_raw_milos_IdxMgr.so
+vendor/lib64/mt6878/mot_scout_imx896_mipi_raw_milos_tuning.so
+vendor/lib64/jcos_client.so
+vendor/lib64/mt6878/libalgo.aosp.log.so
